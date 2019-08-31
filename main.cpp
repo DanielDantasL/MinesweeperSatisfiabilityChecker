@@ -16,24 +16,33 @@ public:
     }
 };
 
+static bool IsViable(int **grid);
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
 
-    // Testing basic struct
-    MinesweeperInstance test = MinesweeperInstance(4, 4);
-    for (int i = 0; i < test.Columns; i++) {
-        for (int j = 0; j < test.Rows; j++) {
-            test.Grid[i][j] = i + j;
-        }
-    }
+    // TODO create and populate some instances for testing
 
-    for (int i = 0; i < test.Columns; i++) {
-        for (int j = 0; j < test.Rows; j++) {
-            std::cout << test.Grid[i][j] << " ";
-        }
-        std::cout << std::endl;
+    // Example on how to create a test instance
+    MinesweeperInstance instance = MinesweeperInstance(4, 4);
+//    for (int i = 0; i < instance.Columns; i++) {
+//        for (int j = 0; j < instance.Rows; j++) {
+//            instance.Grid[i][j] = 0;
+//        }
+//    }
+
+    //TODO Check if instances satisfy conditions
+    if (IsViable(instance.Grid)) {
+        std::cout << "The instance is valid" << std::endl;
+    } else {
+        std::cout << "The instance is invalid" << std::endl;
     }
 
     return 0;
+}
+
+
+static bool IsViable(int **grid) {
+    //TODO implement algorithm here
+    return false;
 }
 
