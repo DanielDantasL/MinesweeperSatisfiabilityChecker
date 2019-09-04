@@ -13,7 +13,7 @@
  *  
  *  Value 9 represent an unkown tile, whether it has a bomb or is an empty
  *  tile.
- *  Value 9 is read as a bomb during the "checking"
+ *  Value 9 is read as a bomb during the "checking" phase.
 **/
 
 
@@ -157,7 +157,7 @@ void enviroment(int grid[][COLUMNS]){
     CheckAdjacencies(grid);
 
 
-    // Use this space to arbitralily choose other unkown values(9).
+    // Use this space to arbitrarily choose other unkown values(9).
 
     turnedTiles(grid);
 
