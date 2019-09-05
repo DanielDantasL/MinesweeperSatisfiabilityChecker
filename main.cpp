@@ -140,11 +140,14 @@ int main() {
     instance.RevealAt(0, 0, 3);
     instance.RevealAt(1, 3, 5);
 
-    if (TestAllCombinations(instance, instance.GetMaxBombs(), 0)) {
-        std::cout << "The instance is valid" << std::endl;
-    } else {
-        std::cout << "The instance is invalid" << std::endl;
+    int maxBombs = instance.GetMaxBombs();
+    for (int bombs = maxBombs; bombs >= 0 ; --bombs) {
+        if (TestAllCombinations(instance, bombs, 0)) {
+            std::cout << "The instance is valid" << std::endl;
+            return 0;
+        }
     }
 
+    std::cout << "The instance is invalid" << std::endl;
     return 0;
 }
