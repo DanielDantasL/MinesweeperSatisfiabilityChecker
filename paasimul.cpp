@@ -157,7 +157,7 @@ void enviroment(int grid[][COLUMNS]){
     CheckAdjacencies(grid);
 
 
-    // Use this space to arbitrarily choose other unkown values(9).
+    // Use this space to arbitrarily choose other unkown tiles(9).
 
     turnedTiles(grid);
 
