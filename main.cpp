@@ -49,7 +49,6 @@ int main() {
     instance.PlaceBombsOnTheGrid(3);
     instance.CalculateSolution();
     instance.PrintSolution();
-//    instance.RevealAt(0, 0, false);
 
     MinesweeperBot bot = MinesweeperBot();
 
@@ -80,42 +79,5 @@ int main() {
             return 1;
         }
     }
-
-//    instance.AddBombAt(0, 1);
-//    instance.AddBombAt(1, 0);
-//    instance.AddBombAt(1, 1);
-//    instance.RevealAt(0, 1, true);
-//
-//    instance.PrintRevealedGrid();
-//
-//    MinesweeperBot bot = MinesweeperBot();
-//    int revealed = bot.ChooseCellToReveal(instance);
-//    std::cout << "ChosenCell " << revealed << std::endl;
-//    bool flagBomb = revealed < 0;
-//    revealed = flagBomb ? -revealed : revealed;
-//    instance.RevealAt(revealed % instance.Rows, revealed / instance.Rows, flagBomb);
-//
-//    instance.PrintRevealedGrid();
-//
-//    revealed = bot.ChooseCellToReveal(instance);
-//    std::cout << "ChosenCell " << revealed << std::endl;
-//    flagBomb = revealed < 0;
-//    revealed = flagBomb ? -revealed : revealed;
-//    instance.RevealAt(revealed % instance.Rows, revealed / instance.Rows, flagBomb);
-//
-//    instance.PrintRevealedGrid();
-//
-//
-//    instance.PrintSolution();
-
-//    int maxBombs = instance.GetMaxBombs();
-//    for (int bombs = maxBombs; bombs >= 0; --bombs) {
-//        if (TestAllCombinations(instance, bombs, 0)) {
-//            std::cout << "The instance is valid" << std::endl;
-//            return 0;
-//        }
-//    }
-//
-//    std::cout << "The instance is invalid" << std::endl;
     return 0;
 }
